@@ -1,177 +1,177 @@
-# 🔍 실시간 이상 탐지 시스템 (PPO)
+## 🔍 Real-time Anomaly Detection System (PPO)
 
-<h1 align="center">TEAM 초코pytorch - 실시간 이상 탐지 시스템</h1>
+<h3 align="center">TEAM ChocoPytorch</h1>
 
-## 📋 목차
+### 📋 Table of Contents
 
-- [프로젝트 소개](#프로젝트-소개)
-- [주요 기능](#주요-기능)
-- [기술 스택](#기술-스택)
-- [프로젝트 구조](#프로젝트-구조)
-- [설치 및 실행](#설치-및-실행)
-- [사용법](#사용법)
-- [성능 지표](#성능-지표)
-- [기여자](#기여자)
+- [Project Introduction](#project-introduction)
+- [Key Features](#key-features)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Installation and Setup](#installation-and-setup)
+- [Usage Guide](#usage-guide)
+- [Performance Metrics](#performance-metrics)
+- [Contributors](#contributors)
 
-## 🎯 프로젝트 소개
+### 🎯 Project Introduction
 
-이 프로젝트는 제조 공정 장비에서 실시간으로 수집되는 시계열 데이터에 대한 이상 탐지 및 예측 모델을 개발한 프로젝트입니다. 
+This project develops an anomaly detection and prediction model for time-series data collected in real-time from manufacturing process equipment.
 
-**주요 특징:**
-- 🤖 **PPO (Proximal Policy Optimization)** 기반 강화학습 모델
-- 📊 **실시간 데이터 시각화** 및 모니터링
-- ⚡ **순차적 데이터 처리** (인덱스 0부터 순차 진행)
-- 🎛️ **수동/자동 업데이트** 모드 지원
-- 📈 **실시간 성능 지표** 모니터링
+**Key Features:**
+- 🤖 **PPO (Proximal Policy Optimization)** based reinforcement learning model
+- 📊 **Real-time data visualization** and monitoring
+- ⚡ **Sequential data processing** (sequential processing from index 0)
+- 🎛️ **Manual/Automatic update** mode support
+- 📈 **Real-time performance metrics** monitoring
 
-## ✨ 주요 기능
+### ✨ Key Features
 
-### 1. 실시간 이상 탐지
-- PPO 강화학습 모델을 활용한 실시간 이상 탐지
-- 순차적 데이터 처리로 안정적인 탐지 성능
-- 실시간 차트 업데이트로 현재 처리 상황 시각화
+#### 1. Real-time Anomaly Detection
+- Real-time anomaly detection using PPO reinforcement learning model
+- Stable detection performance through sequential data processing
+- Real-time chart updates visualizing current processing status
 
-### 2. 대화형 웹 인터페이스
-- Streamlit 기반 직관적인 사용자 인터페이스
-- 실시간 차트 및 성능 지표 표시
-- 시작/정지/리셋 버튼으로 쉬운 제어
+#### 2. Interactive Web Interface
+- Intuitive user interface based on Streamlit
+- Real-time charts and performance metrics display
+- Easy control with start/stop/reset buttons
 
-### 3. 성능 모니터링
-- 정확도, 정밀도, 재현율, F1 점수 실시간 계산
-- 이상 탐지 목록 및 상세 정보 표시
-- 처리 진행률 및 현재 상태 모니터링
+#### 3. Performance Monitoring
+- Real-time calculation of accuracy, precision, recall, and F1 score
+- Anomaly detection list and detailed information display
+- Processing progress and current status monitoring
 
-### 4. 유연한 업데이트 모드
-- **자동 업데이트**: 설정 가능한 간격으로 자동 진행
-- **수동 업데이트**: 버튼 클릭으로 단계별 진행 (스크롤 문제 해결)
+#### 4. Flexible Update Modes
+- **Automatic Update**: Automatic progression with configurable intervals
+- **Manual Update**: Step-by-step progression with button clicks (solves scrolling issues)
 
-## 🛠️ 기술 스택
+### 🛠️ Technology Stack
 
-### Backend & Algorithm
+#### Backend & Algorithm
 - **Python 3.8+**
-- **PyTorch**: PPO 모델 구현
-- **Streamlit**: 웹 애플리케이션 프레임워크
-- **Plotly**: 실시간 데이터 시각화
-- **Pandas**: 데이터 처리 및 분석
-- **NumPy**: 수치 계산
+- **PyTorch**: PPO model implementation
+- **Streamlit**: Web application framework
+- **Plotly**: Real-time data visualization
+- **Pandas**: Data processing and analysis
+- **NumPy**: Numerical computation
 
-### Machine Learning
-- **PPO (Proximal Policy Optimization)**: 강화학습 기반 이상 탐지
-- **Custom Environment**: 이상 탐지를 위한 평가 환경
-- **Real-time Processing**: 순차적 데이터 처리
+#### Machine Learning
+- **PPO (Proximal Policy Optimization)**: Reinforcement learning-based anomaly detection
+- **Custom Environment**: Evaluation environment for anomaly detection
+- **Real-time Processing**: Sequential data processing
 
-### Data Visualization
-- **Plotly Graph Objects**: 실시간 차트 생성
-- **Interactive Charts**: 현재 처리 포인트 및 이상 탐지 표시
-- **Responsive Design**: 다양한 화면 크기 지원
+#### Data Visualization
+- **Plotly Graph Objects**: Real-time chart generation
+- **Interactive Charts**: Current processing points and anomaly detection display
+- **Responsive Design**: Support for various screen sizes
 
-## 📁 프로젝트 구조
+### 📁 Project Structure
 
 ```
 bistelligence/
-├── meta_aad/                       # 강화학습 모델
-│   ├── env.py                      # 환경 정의
-│   ├── ppo2.py                     # PPO 모델 구현
-│   ├── agents.py                   # 에이전트 정의
-│   └── utils.py                    # 유틸리티 함수
+├── meta_aad/                       # Reinforcement learning model
+│   ├── env.py                      # Environment definition
+│   ├── ppo2.py                     # PPO model implementation
+│   ├── agents.py                   # Agent definition
+│   └── utils.py                    # Utility functions
 │
-├── data/                           # 데이터 파일
+├── data/                           # Data files
 │   └── sensor_data_with_anomalylabel_isolationforest.csv
 │
-├── log/                            # 학습 로그
-│   └── model.pth                   # 학습된 PPO 모델
+├── log/                            # Training logs
+│   └── model.pth                   # Trained PPO model
 │
-├── results/                        # 결과 파일
+├── results/                        # Result files
 │
-├── src/                            # 소스 코드
-│   └── img/                        # 이미지 파일
+├── src/                            # Source code
+│   └── img/                        # Image files
 │
-├── util/                           # 유틸리티
-│   ├── eda.py                      # 탐색적 데이터 분석
-│   └── preprocess.py               # 데이터 전처리
+├── util/                           # Utilities
+│   ├── eda.py                      # Exploratory data analysis
+│   └── preprocess.py               # Data preprocessing
 │
-├── app.py                          # 메인 Streamlit 애플리케이션
-├── evaluate.py                     # 모델 평가 스크립트
-├── train.py                        # 모델 학습 스크립트
-├── requirements.txt                # Python 의존성
-└── README.md                       # 프로젝트 문서
+├── app.py                          # Main Streamlit application
+├── evaluate.py                     # Model evaluation script
+├── train.py                        # Model training script
+├── requirements.txt                # Python dependencies
+└── README.md                       # Project documentation
 ```
 
-## 🚀 설치 및 실행
+### 🚀 Installation and Setup
 
-### 1. 저장소 클론
+#### 1. Clone Repository
 ```bash
 git clone https://github.com/ChocoPytorch/BISTelligence.git
 cd BISTelligence
 ```
 
-### 2. 의존성 설치
+#### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. 애플리케이션 실행
+#### 3. Run Application
 ```bash
 streamlit run app.py
 ```
 
-### 4. 브라우저에서 접속
+#### 4. Access in Browser
 ```
 http://localhost:8501
 ```
 
-## 📖 사용법
+### 📖 Usage Guide
 
-### 1. 애플리케이션 시작
-- 브라우저에서 `http://localhost:8501` 접속
-- 데이터 로드 및 모델 초기화 완료 확인
+#### 1. Application Startup
+- Access `http://localhost:8501` in browser
+- Confirm data loading and model initialization completion
 
-### 2. 설정 조정
-- **자동 업데이트**: 체크박스로 자동/수동 모드 선택
-- **업데이트 간격**: 자동 모드에서 처리 간격 설정 (0.1~2.0초)
-- **차트 윈도우 크기**: 차트에 표시할 데이터 포인트 수 (50~200)
+#### 2. Configuration Adjustment
+- **Automatic Update**: Select automatic/manual mode with checkbox
+- **Update Interval**: Set processing interval in automatic mode (0.1~2.0 seconds)
+- **Chart Window Size**: Number of data points to display in chart (50~200)
 
-### 3. 이상 탐지 시작
-- **▶️ 시작**: 실시간 이상 탐지 시작
-- **⏸️ 정지**: 탐지 중단
-- **🔄 리셋**: 모든 상태 초기화
+#### 3. Start Anomaly Detection
+- **▶️ Start**: Start real-time anomaly detection
+- **⏸️ Stop**: Pause detection
+- **🔄 Reset**: Reset all states
 
-### 4. 결과 확인
-- **실시간 차트**: 현재 처리 중인 데이터 포인트 표시
-- **성능 지표**: 정확도, 정밀도, 재현율, F1 점수
-- **이상 탐지 목록**: 탐지된 이상 데이터 상세 정보
+#### 4. View Results
+- **Real-time Chart**: Display current processing data points
+- **Performance Metrics**: Accuracy, precision, recall, F1 score
+- **Anomaly Detection List**: Detailed information of detected anomalies
 
-## 📊 성능 지표
+### 📊 Performance Metrics
 
-### 실시간 모니터링
-- **정확도 (Accuracy)**: 전체 예측 중 올바른 예측 비율
-- **정밀도 (Precision)**: 이상으로 탐지된 것 중 실제 이상 비율
-- **재현율 (Recall)**: 실제 이상 중 탐지된 이상 비율
-- **F1 점수**: 정밀도와 재현율의 조화평균
+#### Real-time Monitoring
+- **Accuracy**: Ratio of correct predictions among total predictions
+- **Precision**: Ratio of actual anomalies among detected anomalies
+- **Recall**: Ratio of detected anomalies among actual anomalies
+- **F1 Score**: Harmonic mean of precision and recall
 
-### 시각화
-- **실시간 차트**: 현재 처리 중인 데이터 포인트 하이라이트
-- **이상 탐지 표시**: 탐지된 이상 포인트를 빨간색 X로 표시
-- **진행률**: 전체 데이터 대비 처리 완료 비율
+#### Visualization
+- **Real-time Chart**: Highlight current processing data points
+- **Anomaly Detection Display**: Mark detected anomaly points with red X
+- **Progress Rate**: Processing completion ratio compared to total data
 
-## 🔧 주요 개선사항
+### 🔧 Major Improvements
 
-### 최근 업데이트
-- ✅ **순차적 데이터 처리**: 인덱스 0부터 순차적으로 처리
-- ✅ **실시간 차트 개선**: 현재 처리 포인트 시각화
-- ✅ **스크롤 문제 해결**: 수동 업데이트 모드 추가
-- ✅ **성능 지표 표시**: 실시간 성능 모니터링
-- ✅ **이상 탐지 목록**: 탐지된 이상만 별도 표시
+#### Recent Updates
+- ✅ **Sequential Data Processing**: Sequential processing from index 0
+- ✅ **Real-time Chart Enhancement**: Visualization of current processing points
+- ✅ **Scroll Issue Resolution**: Added manual update mode
+- ✅ **Performance Metrics Display**: Real-time performance monitoring
+- ✅ **Anomaly Detection List**: Separate display of detected anomalies only
 
-### 기술적 개선
-- **PPO 모델 통합**: 강화학습 기반 이상 탐지
-- **환경 기반 평가**: `EvalEnv`를 활용한 정확한 평가
-- **예외 처리 강화**: 안정적인 애플리케이션 실행
-- **UI/UX 개선**: 직관적인 사용자 인터페이스
+#### Technical Improvements
+- **PPO Model Integration**: Reinforcement learning-based anomaly detection
+- **Environment-based Evaluation**: Accurate evaluation using `EvalEnv`
+- **Enhanced Exception Handling**: Stable application execution
+- **UI/UX Improvements**: Intuitive user interface
 
-## 👥 기여자
+### 👥 Contributors
 
-이 프로젝트에 참여한 팀원들입니다.
+Team members who participated in this project.
 
 <table>
   <tbody>
@@ -187,5 +187,5 @@ http://localhost:8501
 
 ---
 
-**BISTelligence.ai** - 제조 공정 이상 탐지 솔루션
+**BISTelligence.ai** - Manufacturing Process Anomaly Detection Solution
 

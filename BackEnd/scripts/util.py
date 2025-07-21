@@ -2,7 +2,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 import BackEnd.scripts.preprocess as sp
-import BackEnd.model.model as mm
+import bistelligence.model.model as mm
 from sklearn.neighbors import LocalOutlierFactor
 import torch
 import torch.nn as nn

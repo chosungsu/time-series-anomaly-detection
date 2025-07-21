@@ -1,13 +1,10 @@
 .venv/
 .vscode/
 .env
-tmp/
 .DS_Store
 **/__pycache__/
 results/
 log/
 src/notebook/
-src/__pycache__/
 data/**
-util/__pycache__/
 BackEnd/**

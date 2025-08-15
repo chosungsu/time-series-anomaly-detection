@@ -3,8 +3,10 @@
 .env
 .DS_Store
 **/__pycache__/
+meta_aad/**
 results/
 log/
 src/notebook/
 data/**
 BackEnd/**
+leaderboard/**
